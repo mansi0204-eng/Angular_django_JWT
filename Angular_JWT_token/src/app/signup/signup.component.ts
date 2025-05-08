@@ -18,9 +18,9 @@ export class SignupComponent {
   }
 
   signUp() {
-    this.httpClient.post('http://localhost:8000/ORSAPI/signUp/', this.form.data).subscribe((res: any) => {
-      console.log('res => ', res.data.message)
-      this.form.message = res.data.message
+    this.httpClient.post('http://localhost:8000/ORSAPI/signup/', this.form.data).subscribe((res: any) => {
+      console.log('res => ', res.result.message)
+      this.form.message = res.result.message
     })
   }
 }
